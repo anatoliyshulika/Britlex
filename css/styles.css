@@ -7,6 +7,7 @@ h5,
 h6,
 p {
   margin: 0;
+  padding: 0;
 }
 
 .list {
@@ -33,16 +34,36 @@ address {
 
 /* -------------------------Common styles--------------------------- */
 :root {
+  --main-white-color: #ffffff;
+  --main-black-color: #000000;
   --main-text-color: #8f95a5;
+  --accent-color: #263238;
+  --logo-color: #939393;
+  --price-bg-color: #eeeeee;
+  --price-text-color: #546269;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
   line-height: 1.8;
+
+  background-color: var(--main-white-color);
   color: var(--main-text-color);
 }
 
+.section {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 1378px;
+  margin: 0 auto;
+}
 /* --------------------------header------------------------- */
 /* Код писать здесь */
 /* --------------------------header------------------------- */
