@@ -83,6 +83,63 @@ body {
 
 /* --------------------------pricing------------------------- */
 /* Код писать здесь */
+.pricing-title{
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 72px;
+  
+  color: #000000;
+}
+.pricing-item{
+  display: inline-flex;
+  align-items: center;
+}
+.pricing-list{
+  text-align: center;
+  width: 426px;
+  margin-right: auto;
+} 
+.pricing-item:not(:last-child){
+  margin-right: 30px;
+}
+.pricing-img{
+display: inline;
+
+width: 280px;
+margin-bottom: 31px;
+}
+.pricing-main{ 
+  padding-top: 30px;
+  padding-bottom: 0;
+}
+.pricing-upertitle{
+ padding-bottom: 20px;
+
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 1.6;
+
+text-transform: capitalize;
+
+color: #263238;
+}
+.pricing-content{
+padding-top: 20px;
+padding-bottom: 30px;
+
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 1.5;
+
+color: #8F95A5;
+}
 /* --------------------------pricing------------------------- */
 
 /* --------------------------contact us------------------------- */
