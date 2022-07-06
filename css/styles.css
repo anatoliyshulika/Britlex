@@ -46,7 +46,7 @@ address {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
-  line-height: 1.8;
+  line-height: 1.5;
 
   background-color: var(--main-white-color);
   color: var(--main-text-color);
@@ -56,6 +56,8 @@ body {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+  padding: 90px 0;
+  /* background-color: coral; */
 }
 
 .container {
@@ -63,6 +65,7 @@ body {
   padding-right: 20px;
   width: 1378px;
   margin: 0 auto;
+  /* background-color: darkorchid; */
 }
 /* --------------------------header------------------------- */
 /* Код писать здесь */
@@ -83,63 +86,80 @@ body {
 
 /* --------------------------pricing------------------------- */
 /* Код писать здесь */
-.pricing-title{
-  display: flex;
-  align-items: center; 
-  justify-content: center;
-  
-  font-style: normal;
+.section-title {
+  text-align: center;
   font-weight: 600;
   font-size: 48px;
-  line-height: 72px;
-  
-  color: #000000;
+  line-height: 1.5;
+
+  color: var(--main-black-color);
 }
-.pricing-item{
-  display: inline-flex;
-  align-items: center;
+.pricing-list {
+  display: flex;
 }
-.pricing-list{
-  text-align: center;
-  width: 426px;
-  margin-right: auto;
-} 
-.pricing-item:not(:last-child){
+
+.pricing-list > .pricing-item {
   margin-right: 30px;
+  flex-basis: calc((100% - 60px) / 3);
 }
-.pricing-img{
-display: inline;
 
-width: 280px;
-margin-bottom: 31px;
+.pricing-item:nth-child(3n+3) {
+  margin-right: 0;
 }
-.pricing-main{ 
-  padding-top: 30px;
-  padding-bottom: 0;
+
+.pricing-content-box {
+  margin-top: 31px;
 }
-.pricing-upertitle{
- padding-bottom: 20px;
 
-font-style: normal;
-font-weight: 600;
-font-size: 30px;
-line-height: 1.6;
-
-text-transform: capitalize;
-
-color: #263238;
+.pricing-content-box > p {
+  height: 90px;
 }
-.pricing-content{
-padding-top: 20px;
-padding-bottom: 30px;
 
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 1.5;
+.pricing-title {
+  margin-bottom: 20px;
 
-color: #8F95A5;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.6;
+  text-transform: capitalize;
+
+  color: var(--accent-color);
 }
+.content{
+  display: flex;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.pricing-content {
+  background: var(--price-bg-color);
+  width: 260px;
+  height: 45px;
+}
+.pricing-price {
+  display: inline-block;
+  width: 79px;
+  height: 36px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  
+
+  color: var(--accent-color);
+  margin-left: 29px;
+  margin-right: 21px;
+  transition-property: transform;
+}
+.pricing-price:hover {
+  transform: scale(1.5);
+  font-weight: 600;
+  background-color: rgb(40, 227, 252);
+}
+.pricing-price:nth-child(1) {
+  transition-duration: 500ms;
+}
+
 /* --------------------------pricing------------------------- */
 
 /* --------------------------contact us------------------------- */
