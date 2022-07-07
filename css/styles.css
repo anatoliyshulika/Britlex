@@ -57,7 +57,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 90px 0;
-  /* background-color: coral; */
 }
 
 .container {
@@ -65,7 +64,15 @@ body {
   padding-right: 20px;
   width: 1378px;
   margin: 0 auto;
-  /* background-color: darkorchid; */
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.5;
+
+  color: var(--main-black-color);
 }
 /* --------------------------header------------------------- */
 /* Код писать здесь */
@@ -85,25 +92,16 @@ body {
 /* --------------------------about us------------------------- */
 
 /* --------------------------pricing------------------------- */
-/* Код писать здесь */
-.section-title {
-  text-align: center;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 1.5;
-
-  color: var(--main-black-color);
-}
 .pricing-list {
   display: flex;
 }
 
-.pricing-list > .pricing-item {
+.pricing-item {
   margin-right: 30px;
   flex-basis: calc((100% - 60px) / 3);
 }
 
-.pricing-item:nth-child(3n+3) {
+.pricing-item:nth-child(3n + 3) {
   margin-right: 0;
 }
 
@@ -122,44 +120,38 @@ body {
   font-size: 30px;
   line-height: 1.6;
   text-transform: capitalize;
-
   color: var(--accent-color);
 }
-.content{
-  display: flex;
-  border-radius: 5px;
-  margin-top: 30px;
-}
 
-.pricing-content {
-  background: var(--price-bg-color);
+.content {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   width: 260px;
   height: 45px;
+  padding: 5px 23px 4px 29px;
+  margin-top: 30px;
+
+  border-radius: 5px;
+  background-color: var(--price-bg-color);
+  transition: transform 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: bottom left;
 }
+
 .pricing-price {
-  display: inline-block;
-  width: 79px;
-  height: 36px;
-  font-weight: 400;
   font-size: 24px;
-  line-height: 1.5;
-  text-align: center;
-  
-
   color: var(--accent-color);
-  margin-left: 29px;
-  margin-right: 21px;
-  transition-property: transform;
-}
-.pricing-price:hover {
-  transform: scale(1.5);
-  font-weight: 600;
-  background-color: rgb(40, 227, 252);
-}
-.pricing-price:nth-child(1) {
-  transition-duration: 500ms;
+  transition: color 800ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.content:hover .pricing-price {
+  font-weight: 600;
+  color: blue;
+}
+
+.content:hover {
+  transform: scale(1.5);
+}
 /* --------------------------pricing------------------------- */
 
 /* --------------------------contact us------------------------- */
