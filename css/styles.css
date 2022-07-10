@@ -231,7 +231,7 @@ body {
 
 .attention-please {
   position: absolute;
-  left: 10px;
+  left: 0;
   top: 105%;
 
   font-size: 14px;
