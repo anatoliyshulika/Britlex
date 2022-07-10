@@ -41,6 +41,7 @@ address {
   --logo-color: #939393;
   --price-bg-color: #eeeeee;
   --price-text-color: #546269;
+  --number: #2A3246;
 }
 
 body {
@@ -88,7 +89,61 @@ body {
 /* --------------------------skills------------------------- */
 
 /* --------------------------about us------------------------- */
-/* Код писать здесь */
+
+.about {
+  line-height: 1.8;
+}
+
+.about .section-title {
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+.number {
+  margin-bottom: 6px;
+
+  font-weight: 600;
+  font-size: 48px;
+  color: var(--number);
+}
+
+.category {
+  font-size: 20px;
+}
+
+.about-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-items: center;
+}
+
+.checklist {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.checklist p {
+  display: block;
+  text-align: center;
+}
+
+.about-first {
+  width: 652px;
+}
+
+.about-img{
+  width: 540px;
+  height: 540px;
+  background-image: url('../images/business-competition.svg');
+  transition: background-image 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about:hover .about-img{
+  background-image: url('../images/business-focus.svg');
+}
+
 /* --------------------------about us------------------------- */
 
 /* --------------------------pricing------------------------- */
