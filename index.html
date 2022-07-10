@@ -110,7 +110,13 @@
           <form>
            <div class="contact-us-form">
              <label class="contact-us-label">
-              <input class="contact-us-mail" type="email" name="mail" placeholder="Enter Your E-mail">
+                <input class="contact-us-mail" type="email" name="mail" placeholder=" ">
+              <span class="contact-us-text">Enter Your E-mail</span>
+              <svg class="contact-form-icon" width="30" height="30">
+										<use class="icon-attention" href="./images/icons.svg#icon-attention"></use>
+										<use class="icon-success" href="./images/icons.svg#icon-success"></use>
+							</svg>
+              <span class="attention-please">Неверный формат данных. Пример правильного формата данных: <span class="form-example">vasya&#64;mail.com</span></span>
             </label>
             <button class="contact-us-button" type="submit">Subscribe</button>
            </div>

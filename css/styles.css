@@ -157,7 +157,7 @@ body {
 /* --------------------------contact us------------------------- */
 /* Код писать здесь */
 .contact-us {
- padding-bottom: 55px;
+  padding-bottom: 55px;
 }
 
 .contact-us-title {
@@ -166,26 +166,97 @@ body {
 }
 
 .contact-us-desc {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   width: 654px;
 }
 
 .contact-us-mail {
   width: 425px;
   height: 70px;
-  padding: 20px 30px;
+  padding: 20px 50px 20px 30px;
 
   border: 1px solid #8f95a5;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .contact-us-label {
+  position: relative;
   margin-right: 30px;
 }
 
-.contact-us-mail::placeholder {
+.contact-us-text {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translate(0, -50%);
+
   font-size: 16px;
   line-height: 1.88;
+
+  transition: transform 800ms cubic-bezier(0.4, 0, 0.2, 1),
+    font-size 800ms cubic-bezier(0.4, 0, 0.2, 1),
+    line-height 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-us-mail:focus + .contact-us-text,
+.contact-us-mail:not(:placeholder-shown) + .contact-us-text {
+  transform: translate(-30px, -70px);
+  color: var(--accent-color);
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.contact-form-icon {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon-success {
+  fill: var(--accent-color);
+  opacity: 0;
+
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-attention {
+  fill: var(--accent-color);
+  opacity: 0;
+
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.attention-please {
+  position: absolute;
+  left: 10px;
+  top: 105%;
+
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  opacity: 0;
+
+  transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-example {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.contact-us-mail:focus:invalid ~ .contact-form-icon .icon-attention,
+.contact-us-mail:invalid:not(:placeholder-shown) ~ .contact-form-icon .icon-attention,
+.contact-us-mail:focus:invalid ~ .attention-please,
+.contact-us-mail:invalid:not(:placeholder-shown) ~ .attention-please {
+  opacity: 1;
+}
+
+.contact-us-mail:focus:valid ~ .contact-form-icon .icon-success,
+.contact-us-mail:valid:not(:placeholder-shown) ~ .contact-form-icon .icon-success {
+  opacity: 1;
 }
 
 .contact-us-button {
