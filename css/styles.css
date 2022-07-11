@@ -41,6 +41,7 @@ address {
   --logo-color: #939393;
   --price-bg-color: #eeeeee;
   --price-text-color: #546269;
+  --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -80,25 +81,21 @@ body {
 
 /* -------------------------------------------------------main------------------------------------------------------------------ */
 /* --------------------------hero------------------------- */
-.hero-title {
-  font-family: "Poppins";
+.hero-title { 
   font-style: normal;
   font-weight: 600;
   font-size: 64px;
-  line-height: 80px;
+  line-height: 1.25;
   margin-bottom: 40px;
   color: #000000;
 }
 
-.hero-text {
-  font-family: "Poppins";
+.hero-text { 
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
-  line-height: 36px;
-
+  line-height: 1.5;
   margin-bottom: 60px;
-
   color: #8f95a5;
 }
 
@@ -124,6 +121,7 @@ body {
   top: 90px;
   right: 0;
   fill: var(--main-black-color);
+  transition: fill  var(--anim);
 }
 
 .lamp:hover {
@@ -203,7 +201,7 @@ body {
 
   min-width: 528px;
   min-height: 581px;
-  background-color: var(--white-color);
+  background-color: var(--main-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -227,7 +225,7 @@ body {
 
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: var(--white-color);
+  background-color: var(--main-white-color);
   cursor: pointer;
 }
 
