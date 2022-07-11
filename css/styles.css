@@ -41,6 +41,7 @@ address {
   --logo-color: #939393;
   --price-bg-color: #eeeeee;
   --price-text-color: #546269;
+  --anim: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -80,7 +81,156 @@ body {
 
 /* -------------------------------------------------------main------------------------------------------------------------------ */
 /* --------------------------hero------------------------- */
-/* Код писать здесь */
+.hero-title { 
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 1.25;
+  margin-bottom: 40px;
+  color: #000000;
+}
+
+.hero-text { 
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 60px;
+  color: #8f95a5;
+}
+
+.hero-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.hero-image {
+  width: 654px;
+  height: 510px;
+}
+
+.hero-left {
+  position: relative;
+  width: 540px;
+  height: 548px;
+}
+
+.lamp {
+  position: absolute;
+  top: 90px;
+  right: 0;
+  fill: var(--main-black-color);
+  transition: fill  var(--anim);
+}
+
+.lamp:hover {
+  fill: yellow;
+}
+
+.hero-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: none;
+  border-radius: 10px;
+  padding: 23px 64px;
+  display: inline-block;
+  width: 426px;
+  height: 100px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 54px;
+
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+
+  background-color: #263238;
+
+  transition: box-shadow var(--anim), background-color var(--anim);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--bg-color-hero-btn);
+  color: var(--main-black-color);
+  border: 2px solid #263238;
+  border-radius: 10px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+
+/*-----------Модальное окно-------------*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  pointer-events: initial;
+
+  transition: opacity var(--anim);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  min-width: 528px;
+  min-height: 581px;
+  background-color: var(--main-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform var(--anim);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--main-white-color);
+  cursor: pointer;
+}
+
+
+
 /* --------------------------hero------------------------- */
 
 /* --------------------------skills------------------------- */
