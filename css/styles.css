@@ -277,7 +277,9 @@ body {
 
 .contact-us-button:hover,
 .contact-us-button:focus {
-  background-color: var(--main-black-color);
+  background-color: var(--main-white-color);
+  color: var(--main-black-color);
+  border-color: var(--main-black-color);
 }
 
 .thumb {
