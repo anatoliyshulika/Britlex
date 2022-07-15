@@ -111,7 +111,7 @@ color: var(--logo-color);
 }
 
 .navigation {
-display: flex;  
+display: flex;
 }
 .item:not(:last-child) {
   margin-right: 50px;
@@ -125,7 +125,7 @@ color: var(--accent-color);
 
 .header-list:focus,
 .header-list:hover {
-padding: 20px;
+ padding: 20px;
 background-color: var(--accent-color);
 color: var(--main-white-color);
 font-weight: 700;
@@ -135,6 +135,7 @@ border-radius: 10px;
 transition-property: color, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+
   
 .header-button {
 margin-left: auto;
