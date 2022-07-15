@@ -75,7 +75,104 @@ body {
   color: var(--main-black-color);
 }
 /* --------------------------header------------------------- */
-/* Код писать здесь */
+ul {
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+}
+
+.page-header {
+  position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+a {text-decoration: none;} 
+
+
+  .header-section {
+      max-width: 1600px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 55px 0;
+    }
+.header-container {
+  display: flex;
+  padding-left: 20px;
+    padding-right: 20px;
+    width: 1378px;
+    margin: 0 auto;
+  }
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  margin-right: 228px;
+  text-decoration: none;
+font-size: 36px;
+  line-height: calc(54/36);
+  letter-spacing: 0.03em;
+  color: var(--main-black-color);}
+
+  .header-span {
+color: var(--logo-color);
+}
+
+.navigation {
+display: flex;
+}
+.item:not(:last-child) {
+  margin-right: 50px;
+}
+.header-list {
+font-weight: 500;
+ font-size: 20px;
+ line-height: calc(30/20);
+color: var(--accent-color);
+}
+
+.item:focus,
+.item:hover {
+transform: scale(1,2);
+}
+.header-list:hover,
+.header-list:focus {
+  background-color: var(--accent-color);
+  color:var(--main-white-color);
+  border-radius: 5px;
+
+transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+
+  
+.header-button {
+margin-left: 121px;
+padding: 20px 56px;
+width: 312px;
+  height: 70px;
+background-color: var(--main-white-color);
+color: var(--main-black-color);
+font-weight: 400;
+font-size: 20px;
+line-height: calc(30/20);
+text-align: center;
+letter-spacing: 0.03em;
+border: 2px solid #263238;
+  border-radius: 10px;
+
+  transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-button:hover,
+.header-button:focus {
+background-color: var(--accent-color);
+color: var(--main-white-color);
+}
 /* --------------------------header------------------------- */
 
 /* -------------------------------------------------------main------------------------------------------------------------------ */
